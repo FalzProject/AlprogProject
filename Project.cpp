@@ -37,14 +37,14 @@ menu:
 
     if (pil==1) {
     lagi:
-            cout << endl;
-            cout << "Masukkan nomor rekening  : " ;
-            cin >> no;
-            for (i=0;i<n;i++) {
-            if (no==nas[i].norek)
-            ketemu=true;
-            else
-            ketemu=false;
+        cout << endl;
+        cout << "Masukkan nomor rekening  : " ;
+        cin >> no;
+        for (i=0;i<n;i++) {
+        if (no==nas[i].norek)
+        ketemu=true;
+        else
+        ketemu=false;
     }
     if (ketemu){           
             cout <<"Nomor rekening tersebut sudah ada, ulangi lagi" << endl;
@@ -82,31 +82,30 @@ menu:
             cout <<"Masukkan sembarang angka untuk kembali ke menu utama : " ; 
             cin >> x;
             goto menu;
-        }else if (pil==3){           
-            cout<< endl;
-            cout << "Masukkan nomor rekening : " ; 
-            cin >> no;
-            for  (i=0; i<n ; i++){
-                if (no==(nas[i].norek)) {   
-                    pos=i;
-                    ketemu=true;
-                    break;
-                }else
-                    ketemu=false;
-
+    }else if (pil==3){           
+        cout<< endl;
+        cout << "Masukkan nomor rekening : " ; 
+        cin >> no;
+        for  (i=0; i<n ; i++){
+            if (no==(nas[i].norek)) {   
+            pos=i;
+            ketemu=true;
+            break;
+        }else
+            ketemu=false;
         }
-           if (ketemu){  
-            cout << "Masukkan jumlah penarikan : " ; cin >> tarik;
-            if  (tarik<(nas[pos].saldo)){
-                nas[pos].saldo=nas[pos].saldo-tarik;
-                cout<< endl;
-            } else
-                cout << "Maaf saldo anda tidak mencukupi" << endl;
+        if (ketemu){  
+        cout << "Masukkan jumlah penarikan : " ; cin >> tarik;
+        if  (tarik<(nas[pos].saldo)){
+            nas[pos].saldo=nas[pos].saldo-tarik;
+            cout<< endl;
         } else
-        cout <<"Nomor rekening tidak ditemukan" << endl << endl;
-        cout <<"Masukkan sembarang angka untuk kembali ke menu utama : " ; 
-        cin >> x;
-        goto menu;
+            cout << "Maaf saldo anda tidak mencukupi" << endl;
+        } else
+            cout <<"Nomor rekening tidak ditemukan" << endl << endl;
+            cout <<"Masukkan sembarang angka untuk kembali ke menu utama : " ; 
+            cin >> x;
+            goto menu;
     } else if (pil==4) {
         cout << endl << endl <<"Daftar Nasabah Tabungan" << endl;
         cout <<"|====|================|================|================|" << endl;
